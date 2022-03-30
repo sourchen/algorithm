@@ -1,7 +1,7 @@
 <div align="center">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  <h3 align="center">Best-README-Template</h3>
-  <p align="center">An awesome README template to jumpstart your projects!</p></div>
+    <img src="https://github.com/sourchen/algorithm/blob/master/CTDSSicon.png" alt="Logo" width="200" height="200">
+  <h3 align="center">Carry On For You / Carry trade support sysytem</h3>
+  <p align="center">Based on prediction of short- to mid-term exchange rates, with self develop ANN algorithm</p></div>
 
 ## About CTDSS
 
