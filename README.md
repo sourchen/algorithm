@@ -47,9 +47,15 @@ CTDSS provides five currencies (Table 1) and three transaction durations (3, 6, 
 * **Capital Circulation in carrying Trade Transaction**
 Since several numerical values are included in carrying trade, we have come up with the interface shown in Figure 3, offering users to input the amount and returning a comprehensible outline of the transaction. 
 
-<div align="center">
 ![image](https://github.com/sourchen/algorithm/blob/master/media/p3.gif)
-<p align="center">Figure 3. Capital Circulation in carrying Trade Transaction</p>
+
+<p align="center">
+  <img src="https://github.com/sourchen/algorithm/blob/master/media/p3.gif?raw=true" alt="Sublime's custom image"/>
+</p>
+<div align="center">
+	
+
+	<p align="center">Figure 3. Capital Circulation in carrying Trade Transaction</p>
 </div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
