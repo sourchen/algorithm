@@ -6,9 +6,30 @@
 	<p align="center">&#128521; User friendly interface design</p>
 </div>
 
-## About CTDSS
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+	  <li>
+		  <a href="#about-the-project">About CTDSS</a>
+		  <ul>
+				<li><a href="#Introduction">Introduction</a></li>
+				<li><a href="#System_Functions">System Functions</a></li>
+				<li><a href="#built-with">Built With</a></li>
+	    </ul>
+    </li>
+	  <li>
+		<a href="#Model Development Techniques">Model Development Techniques</a>
+		  <ul>
+				<li><a href="#Data Description">Data Description</a></li>
+				<li><a href="#Model Description">Model Description</a></li>
+		  </ul>
+	</ol>
+</details>
 
-<h3>&#128205; Introduction</h3>
+<h2 id="about-the-project">About CTDSS</h2>
+
+<h3 id="Introduction">&#128205; Introduction</h3>
 
 ***Carry Trade***
 
@@ -22,7 +43,7 @@ Targeting companies that need foreign exchange hedge and capital circulation, we
 
 ---
 
-<h3>&#128205; System Functions</h3>
+<h3 id="System_Functions">&#128205; System Functions</h3>
 
 <h4>&#128161; Key information imparted for quick data query</h4>
 	
@@ -72,7 +93,7 @@ Since several numerical values are included in carrying trade, we have come up w
 
 ---
 
-<h3>&#128205; Built With</h3> 
+<h3 id="built-with">&#128205; Built With</h3> 
 
 Built CTDSS system: use Django as system framework along with Python as back-end.
 Implement a new learning algorithm: use TensorFlow (version 2.5) and Python.
@@ -89,9 +110,9 @@ Implement a new learning algorithm: use TensorFlow (version 2.5) and Python.
 
 ---
 
-## Model Development Techniques
+<h2 id="Model Development Techniques">Model Development Techniques</h2>
 
-<h3>&#128205; Data Description</h3> 
+<h3 id="Data Description">&#128205; Data Description</h3> 
 
 - **variables**
 The independent variables for predicting forward exchange rate are based on macroeconomics theory (Jorda, 2012), Table 2 are 4 input variables: 
@@ -121,7 +142,7 @@ The independent variables for predicting forward exchange rate are based on macr
 
 ---
 
-<h3>&#128205; Model Description</h3> 
+<h3 id="Model Description">&#128205; Model Description</h3> 
 
 The low chart of our self-developed learning algorithm for the exchange rate prediction model is shown in Figure 4.
 
