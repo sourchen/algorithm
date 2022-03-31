@@ -1,13 +1,12 @@
-<div align="center">
-    <img src="https://github.com/sourchen/algorithm/blob/master/CTDSSicon.png" alt="Logo" width="200" height="200">
-  <h3 align="center">Carry On For You / Carry trade support sysytem</h3>
-  <p align="center">Based on prediction of short- to mid-term exchange rates, with self develop ANN algorithm</p></div>
-
 ## About CTDSS
 
-Carry trade is involved a high-yielding country and a low-yielding one, while traders attempt to capture the difference between their rates. It has become a source of investment strategy for investors or those with a natural need for forex trading. Profits made from a carry trade derive from not only the difference between interest rates but also the increase or decrease of exchange rate due to forward rate bias. 
+### Introduction
 
-Targeting companies that need foreign exchange hedge and capital circulation, we position our system as a carry trade decision support system (CTDSS). <abbr title="Hyper Text Markup Language"><font color=blue>**By building prediction models of multiple currency pairs and returning with short- to mid-term exchange rates,**</font> we provide users with ancillary values to proceed with a carry trade.
+***Carry Trade***
+Carry trade is involved a high-yielding country and a low-yielding one, while traders attempt to capture the difference between their rates. It has become a source of investment strategy for investors or those with a natural need for forex trading. <b><u>Profits made from a carry trade</u></b>derive from not only the difference between interest rates but also <b><u>the increase or decrease of exchange rate due to forward rate bias</u></b>. 
+
+***Problem Solving***
+Targeting companies that need foreign exchange hedge and capital circulation, we position our system as a carry trade decision support system (CTDSS). By <b><u>building prediction models of multiple currency pairs</u></b>and <b><u>returning with short- to mid-term exchange rates</u></b>, we provide users with ancillary values to proceed with a carry trade.
 
 ### System Introduction
 
@@ -15,28 +14,43 @@ Here are the system functions:
 
 * **Key information imparted for quick data query**
 CTDSS provides five currencies (Table 1) and three transaction durations (3, 6, and 12 months), forming 75 (= 5*5*3) forex trade combinations. 
-	
-![image](https://github.com/sourchen/algorithm/blob/master/media/p1.gif)
-	
+
 	As shown in Figure 1, relevant indicators are well presented in a table format in which we collect the data from major banks of their countries and store it in our database.
 
-| Currencies | Representative banks  |
-| :----   | :-----  |
-|  Euro (EUR)      | European Central Bank |
-| Indonesian Rupiah (IDR) |   Bank Mandiri   |
-| Japanese Yen (JPY) |    MUFG Bank    |
-| New Taiwan Dollar (TWD)  |    Bank of Taiwan    |
-| United States Dollar (USD) |    JPMorgan Chase    |
+<div align="center">
+<table>
+	<tr><th>Currencies</th><th>Representative banks</th></tr>
+	<tr> <td>Euro (EUR)</td><td>European Central Bank</td></tr>
+	<tr> <td>Indonesian Rupiah (IDR)</td><td>Bank Mandiri</td></tr>
+	<tr> <td>Japanese Yen (JPY)</td><td>MUFG Bank</td></tr>
+	<tr> <td>New Taiwan Dollar (TWD)</td><td>Bank of Taiwan</td></tr>
+	<tr> <td>United States Dollar (USD)</td><td>JPMorgan Chase</td></tr>
+</table>
+<p>Table 1. Five Currencies and Corresponding Representative Banks</p>
+</div>
 
-<p align="center">Table 1. Five Currencies and Corresponding Representative Banks</p>
+<div align="center">
+![image](https://github.com/sourchen/algorithm/blob/master/media/p1.gif)
+<p align="center">Figure 1. System Homepage of CTDSS</p>
+</div>
 
 * **Historical Data Visualization and Exchange Rate Calculator**
  As shown in Figure 2.
 	* Trends of historical data including loan rate, deposit rate, and spot exchange rate are shown in the line chart, so are our predicted exchange rate results.
 	* An assistive exchange rate calculator can convert between the currency calculated by either the current spot exchange rate or the exchange rate predicted by our model.
 
-* **Capital Circulation in Carry Trade Transaction**
-Since several numerical values are included in a carry trade, we have come up with the interface shown in Figure 3, offering users to input the amount and returning a comprehensible outline of the transaction. 
+<div align="center">
+![image](https://github.com/sourchen/algorithm/blob/master/media/p2.gif)
+<p align="center">Figure 2. Historical Data Chart (Left); Exchange Rate Conversion (Right)</p>
+</div>
+
+* **Capital Circulation in carrying Trade Transaction**
+Since several numerical values are included in carrying trade, we have come up with the interface shown in Figure 3, offering users to input the amount and returning a comprehensible outline of the transaction. 
+
+<div align="center">
+![image](https://github.com/sourchen/algorithm/blob/master/media/p3.gif)
+<p align="center">Figure 3. Capital Circulation in carrying Trade Transaction</p>
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -62,6 +76,7 @@ Implement a new learning algorithm: use TensorFlow (version 2.5) and Python.
 - **variables**
 The independent variables for predicting forward exchange rate are based on macroeconomics theory (Jorda, 2012), Table 2 are 4 input variables: 
 
+<div align="center">
 <table>
 	<tr><th>Variable</th><th>Definition</th></tr>
 	<tr> <td>x1</td><td>logged exchange rate (home currency / foreign currency)</td></tr>
@@ -72,6 +87,7 @@ The independent variables for predicting forward exchange rate are based on macr
 	<tr> <td>y</td><td>the prediction for exchange rate</td></tr>
 </table>
 <p align="center">Table 2. Variables based on macroeconomics theory</p>
+</div>
 
 - monthly data: January 2000 - August 2021 (248 months)
 	- training data: January 2000 – March 2017 (196 months)
@@ -89,13 +105,38 @@ The low chart of our self-developed learning algorithm for the exchange rate pre
 >
 In general, the hidden layer nodes of the neural network model are set directly at the beginning. However, Our self-developed learning algorithm can adaptly learn based on current performance it learned to decide whether add or delete nodes. As for some data which the model can't learn right away, it'll use a rule-based method to cram and adjust hyperparameters of the node. Adapt learning can avoid the overfitting condition often encountered in neural network learning.
 
+<div align="center">
+![image](https://github.com/sourchen/algorithm/blob/master/media/p4.png)
 <p align="center">Figure 4. Flow chart of our self-developed learning algorithm</p>
-
-- **Model Evaluation**
+</div>
 
 ***How well does the model train? Explain why.***
->This algorithm has better performance in TWD/USD, TWD/IDR, and the research results show that they are all better than general statistical models (ex. multiple regression).
+>The result is shown in Figure 5. This algorithm has better performance in TWD/USD, TWD/IDR, and the research results show that they are all better than general statistical models (ex. multiple regression).
+
+<div align="center">
+<table>
+	<tr><th>currency pair / period</th><th>3 months</th><th>6 months</th><th>1 year</th></tr>
+	<tr> <td>USD/TWD</td><td>1.01%</td><td>1.074%</td><td>1.379%</td></tr>
+	<tr> <td>USD/EUR</td><td>2.214%</td><td>4.978%</td>
+	<td>9.642%</td></tr>
+	<tr> <td>USD/IDR</td><td>2.34%</td><td>2.754%</td><td>3.268%</td></tr>
+	<tr> <td>USD/JPY</td><td>1.208%</td><td>1.817%</td><td>1.871%</td></tr>
+	<tr> <td>EUR/TWD</td><td>1.959%</td><td>3.354%</td><td>5.891%</td></tr>
+	<tr> <td>EUR/IDR</td><td>3.516%</td><td>3.365%</td><td>4.352%</td></tr>
+	<tr> <td>EUR/JPY</td><td>3.64%</td><td>3.649%</td><td>3.687%</td></tr>
+	<tr> <td>TWD/JPY</td><td>2.015%</td><td>2.163%</td><td>2.498%</td></tr>
+	<tr> <td>TWD/IDR</td><td>2.79%</td><td>2.239%</td><td>3.733%</td></tr>
+	<tr> <td>JPY/IDR</td><td>4.387%</td><td>3.704%</td><td>3.154%</td></tr>
+</table>
+<p>Table 2. our self-developed learning algorithm performance（sMape）</p>
+</div>
 
 After our study, it was found that there is higher interdependence with the currency markets of Taiwan, the United States, and Indonesia. Therefore, the macroeconomic data we used can comprehensively present the current currency market.
 
 On the contrary, due to the low-interest-rate policy of Europe and Japan, training data cannot reflect overall currency markets. Hence, in the future, we would like to have a deeper study on whether other political or societal variables are suitable for the prediction of these currency markets influenced by policies.
+<p>Table 3. our self-developed learning algorithm performance（sMape）</p>
+
+<div align="center">
+![image](https://github.com/sourchen/algorithm/blob/master/media/evaluation.png)
+<p align="center">Table 4. model performance comparsion（sMape）</p>
+</div>
