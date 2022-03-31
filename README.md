@@ -15,7 +15,9 @@ Here are the system functions:
 
 * **Key information imparted for quick data query**
 CTDSS provides five currencies (Table 1) and three transaction durations (3, 6, and 12 months), forming 75 (= 5*5*3) forex trade combinations. 
-
+	
+https://github.com/sourchen/algorithm/blob/master/media/1.mov
+	
 	As shown in Figure 1, relevant indicators are well presented in a table format in which we collect the data from major banks of their countries and store it in our database.
 
 | Currencies | Representative banks  |
